@@ -195,3 +195,36 @@ html[data-theme="dark"] .ticker-toggle:hover { background: #203952; }
 .site-style-40 { transition-delay: 70ms; }
 .site-style-41 { transition-delay: 210ms; }
 .site-style-42 { transition-delay: 350ms; }
+/* Hamyar Persian IT-Service — desktop hover effects */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  #site .reveal > .group[class*="hover:-translate-y-"],
+  #site :is([class~="hover:-translate-y-0.5"], [class~="hover:-translate-y-1"]),
+  #site :is([class~="group-hover:scale-110"], [class~="group-hover:-translate-y-[3px]"]) {
+    transition-duration: 220ms;
+    transition-timing-function: ease-out;
+  }
+
+  #site .reveal:is(:hover, :focus-within) > .group[class*="hover:-translate-y-"] {
+    translate: 0 -4px;
+  }
+
+  #site :is([class~="hover:-translate-y-0.5"], [class~="hover:-translate-y-1"]):is(:hover, :focus-visible) {
+    scale: 1.025;
+  }
+
+  #site .group:is(:hover, :focus-within) [class~="group-hover:scale-110"] { scale: 1.08; }
+  #site .group:is(:hover, :focus-within) [class~="group-hover:rotate-3"] { rotate: 2deg; }
+  #site .group:is(:hover, :focus-within) [class~="group-hover:-translate-y-[3px]"] { translate: 0 -2px; }
+
+  #site [data-steady-photo] > img { transition: scale 240ms ease-out; }
+  #site [data-steady-photo]:hover > img { scale: 1.012; }
+
+  html[dir="rtl"] #site { --hps-arrow-shift: -3px; }
+  #site a[class~="hover:gap-3"] > svg { transition: translate 220ms ease-out; }
+  #site a[class~="hover:gap-3"]:is(:hover, :focus-visible) > svg {
+    translate: var(--hps-arrow-shift, 3px) 0;
+  }
+
+  #site [data-floating-contact] { transition-property: opacity, box-shadow, scale; }
+  #site [data-floating-contact]:is(:hover, :focus-visible) { scale: 1.07; }
+}
